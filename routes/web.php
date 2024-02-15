@@ -33,3 +33,11 @@ Route::post('api/v1/add-customer',
 
 Route::get('api/v1/customers/{customer}/update-customer', 
 [CustomerController::class, 'modify'])->name('customers.modify');
+
+
+Route::get('api/v1/customers/{customer}/update',
+[CustomerController::class, 'update'])->name('customers.update');
+
+
+Route::get('api/v1/customers/{customer}/delete',
+[CustomerController::class, 'delete'])->name('customers.delete');

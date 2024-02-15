@@ -37,5 +37,17 @@ class CustomerController extends Controller
     return view('customers.update-customer', ['customer' => $customer]);
    }
 
+   public function update(Customer $customer,Request $request){
+    $createdCustomer = $request->validate([
+        'name' => 'required',
+        'address' => 'required',
+        'designation' => 'required',
+        'age' => 'required'
+    ]);
+
+    $customer->update($createdCustomer);
+    return redirect()->route('customers.customer');
+  }
+
 
 }

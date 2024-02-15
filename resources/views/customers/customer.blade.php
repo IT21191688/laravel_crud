@@ -46,7 +46,7 @@
                         <td>{{ $customer->age }}</td>
                         
                        <td>
-                         <a href="{{ route('customers.', ['customer' => $customer]) }}" class="btn btn-primary btn-sm">Update</a>
+                         <a href="{{ route('customers.modify', ['customer' => $customer]) }}" class="btn btn-primary btn-sm">Update</a>
                        </td>
 
                         <td> 

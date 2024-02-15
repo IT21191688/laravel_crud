@@ -9,8 +9,9 @@
 <body>
     
 
-<form method="post"  class="container col-md-6 border border-success mt-5 p-5">
+<form method="put" action="{{route('customers.update',['customer'=>$customer])}}" class="container col-md-6 border border-success mt-5 p-5">
  @csrf
+ @method('put')
   <hr>
   <h2 class="mt-3 mb-3 text-primary text-center font-weight-bold">Update Customer Form</h2>
   <hr>
