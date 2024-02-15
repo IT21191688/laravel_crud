@@ -24,6 +24,7 @@
     <div class="container">
         <h1>Customer List</h1>
         <div class="table-responsive">
+            <a href="{{ route('customers.new') }}" class="btn btn-success float-right">Add New Customer</a>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -49,9 +50,14 @@
                          <a href="{{ route('customers.modify', ['customer' => $customer]) }}" class="btn btn-primary btn-sm">Update</a>
                        </td>
 
-                        <td> 
-                          <a  class="btn btn-danger btn-sm">Delete</a> 
-                        </td>
+                       <td> 
+    <form method="post" action="{{ route('customers.delete', ['customer' => $customer->id]) }}" onsubmit="return confirm('Are you sure you want to delete this customer?');">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+    </form>
+</td>
+
 
                     </tr>
                     @endforeach

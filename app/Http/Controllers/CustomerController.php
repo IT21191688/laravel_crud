@@ -50,4 +50,15 @@ class CustomerController extends Controller
   }
 
 
+  public function delete($customer){
+    $customer = Customer::findOrFail($customer);
+    
+    $customer->delete();
+    
+    return redirect()->route('customers.customer')->with('success', 'Customer deleted successfully.');
+   }
+
+
+
+
 }

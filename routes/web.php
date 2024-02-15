@@ -39,5 +39,5 @@ Route::get('api/v1/customers/{customer}/update',
 [CustomerController::class, 'update'])->name('customers.update');
 
 
-Route::get('api/v1/customers/{customer}/delete',
+Route::delete('api/v1/customers/{customer}/delete',
 [CustomerController::class, 'delete'])->name('customers.delete');
