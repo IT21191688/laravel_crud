@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\http\Controllers\CustomerController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('api/v1/customer',['',''])->name('');
+Route::get('api/v1/customer',
+[CustomerController::class,'customers'])->name('customers.customer');
+
+
+Route::get('api/v1/new-customer',
+[CustomerController::class,'new'])->name('customers.new');
