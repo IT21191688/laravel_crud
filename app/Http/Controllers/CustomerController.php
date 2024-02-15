@@ -10,7 +10,8 @@ use App\Models\Customer;
 class CustomerController extends Controller
 {
     public function customers(){
-        return view('customers.customer');
+        $customerList=Customer::all();
+        return view('customers.customer',['customers'=>$customerList]);
     }
 
     public function new(){
