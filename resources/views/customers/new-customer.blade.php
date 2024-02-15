@@ -9,27 +9,27 @@
 <body>
     
 
-<form method="post" action="./routes/customerRoute.php/save-customer" class="container col-md-6 border border-success mt-5 p-5">
+<form method="post" action="{{route('customers.add')}}" class="container col-md-6 border border-success mt-5 p-5">
+ @csrf
   <hr>
   <h2 class="mt-3 mb-3 text-primary text-center font-weight-bold">Customer Form</h2>
   <hr>
   <div class="form-group">
-    <label for="Name">Name</label>
-    <input type="text" class="form-control" id="Name" name="Name"  placeholder="Enter Name" require>
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name"  placeholder="Enter Name" require>
   </div>
   <div class="form-group">
-    <label for="Address">Address</label>
-    <input type="text" class="form-control" id="Address" name="Address"  placeholder="Enter Address" require>
+    <label for="address">Address</label>
+    <input type="text" class="form-control" id="address" name="address"  placeholder="Enter Address" require>
   </div>
   <div class="form-group">
-    <label for="Designation">Designation</label>
-    <input type="text" class="form-control" id="Designation" name="Designation"  placeholder="Enter Designation" require>
+    <label for="designation">Designation</label>
+    <input type="text" class="form-control" id="designation" name="designation"  placeholder="Enter Designation" require>
   </div>
   <div class="form-group">
-    <label for="Age">Age</label>
-    <input type="number" class="form-control" id="Age" name="Age"  placeholder="Enter Age" require>
+    <label for="age">Age</label>
+    <input type="number" class="form-control" id="age" name="age"  placeholder="Enter Age" require>
   </div>
-
   <div class="row ">
     <div class="col">
         <button type="submit" class="mt-3 btn btn-primary col-md-12">Save Customer</button>

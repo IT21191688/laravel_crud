@@ -26,3 +26,7 @@ Route::get('api/v1/customer',
 
 Route::get('api/v1/new-customer',
 [CustomerController::class,'new'])->name('customers.new');
+
+
+Route::post('api/v1/add-customer',
+[CustomerController::class,'add'])->name('customers.add');
