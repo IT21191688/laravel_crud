@@ -32,8 +32,8 @@
                         <th>Address</th>
                         <th>Designation</th>
                         <th>Age</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,8 +44,15 @@
                         <td>{{ $customer->address }}</td>
                         <td>{{ $customer->designation }}</td>
                         <td>{{ $customer->age }}</td>
-                        <td>{{ $customer->created_at }}</td>
-                        <td>{{ $customer->updated_at }}</td>
+                        
+                       <td>
+                         <a href="{{ route('customers.', ['customer' => $customer]) }}" class="btn btn-primary btn-sm">Update</a>
+                       </td>
+
+                        <td> 
+                          <a  class="btn btn-danger btn-sm">Delete</a> 
+                        </td>
+
                     </tr>
                     @endforeach
                 </tbody>

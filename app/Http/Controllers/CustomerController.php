@@ -28,6 +28,14 @@ class CustomerController extends Controller
 
     $savedData = Customer::create($customer);
     return redirect()->route('customers.customer');
-}
+  }
+    
+
+   public function modify($customer){
+    $customer = Customer::findOrFail($customer);
+    
+    return view('customers.update-customer', ['customer' => $customer]);
+   }
+
 
 }
